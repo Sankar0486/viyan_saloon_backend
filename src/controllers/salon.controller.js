@@ -35,4 +35,4 @@ async function dropdown(req, res, next) {
     next(e);
   }
 }
-module.exports = { create, list, get, update, status };
+module.exports = { create, list, get, update, status, dropdown };
