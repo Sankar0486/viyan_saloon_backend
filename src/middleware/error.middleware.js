@@ -13,7 +13,7 @@ function errorHandler(error, req, res, next) {
   if (process.env.NODE_ENV !== "test") {
     const log = { method: req.method, path: req.originalUrl, statusCode, code };
     if (statusCode >= 500) console.error("API error:", log, error);
-    else console.warn("API request rejected:", log);
+    else console.warn("API request rejected:", log,req.body);
   }
 
   const body = {

@@ -3,6 +3,7 @@ const authRoutes = require("./auth.routes");
 const companyRoutes = require("./company.routes");
 const salonRoutes = require("./salon.routes");
 const userRoutes = require("./user.routes");
+const menuRoutes = require("./menu.routes");
 const { authenticate } = require("../middleware/auth.middleware");
 const { requireRole } = require("../middleware/role.middleware");
 const { requireSalonAccess } = require("../middleware/tenant.middleware");
@@ -12,6 +13,7 @@ router.use("/auth", authRoutes);
 router.use("/companies", companyRoutes);
 router.use("/salons", salonRoutes);
 router.use("/users", userRoutes);
+router.use("/menus", menuRoutes);
 
 // Retained V1 compatibility endpoint.
 router.get(
